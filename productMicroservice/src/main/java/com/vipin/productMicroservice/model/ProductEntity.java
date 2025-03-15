@@ -2,7 +2,9 @@ package com.vipin.productMicroservice.model;
 
 import com.vipin.productMicroservice.dto.ProductRequest;
 import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "product")
 public class ProductEntity {
@@ -26,37 +28,5 @@ public class ProductEntity {
         this.title = productRequest.getTitle();
         this.price = productRequest.getPrice();
         this.quantity = productRequest.getQuantity();
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
     }
 }

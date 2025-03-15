@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.Getter;
 
 @Data
-@Getter
 public class ProductResponse {
 
     private int id;
